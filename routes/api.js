@@ -17,7 +17,7 @@ router.get('/api/workouts', (req,res) => {
         {
             $addFields: {
                 totalDuration: {
-                    $sum: '$workouts.duration'
+                    $sum: '$exercises.duration'
                 },
             },
         },
@@ -41,5 +41,22 @@ router.put('/api/workouts/:id', ({body,params},res) => {
     });
 });
 
+router.get('/api/workouts/range', (req,res) => {
+    Exercise.aggregate([
+        {
+            $addFields: {
+                totalduration: {
+                    $sum: '$exercises.duration',
+                }
+            }
+        }
+    ])
+    .then((dbExercise) => {
+        res.json(dbExercise);
+    })
+    .catch(err => {
+        res.json(err);
+    });
+});
 
 module.exports = router;
