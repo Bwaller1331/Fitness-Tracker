@@ -15,5 +15,7 @@ This app is designed to allow the user to add workout routines to a database and
 ### Brandon Waller
 
 ## Links
+*Github repo - https://github.com/Bwaller1331/Fitness-Tracker
+*Heroku Application - https://vast-forest-10092.herokuapp.com/
 #### Github Profile
 * https://github.com/Bwaller1331
