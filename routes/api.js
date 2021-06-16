@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const Exercise = require('../models/exercises.js'); 
+const Exercise = require('../models/exercise.js'); 
 
 
 router.post('/api/workouts',(req,res) => {
@@ -39,5 +39,7 @@ router.put('/api/workouts/:id', ({body,params},res) => {
     .catch(err => {
         res.json(err);
     });
-})
+});
+
+
 module.exports = router;
