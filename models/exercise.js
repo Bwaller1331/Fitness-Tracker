@@ -18,7 +18,7 @@ const exerciseSchema = new mongoose.Schema({
             trim:true,
             required: "Enter the exercise type"
             },
-        weights: Number,
+        weight: Number,
 
         sets: Number,
 
